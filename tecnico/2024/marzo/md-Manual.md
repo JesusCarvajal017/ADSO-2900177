@@ -22,9 +22,9 @@ alert('hola mundo')
 
 | N° | Nombres | ficha |  |
 | --------- | --------- | --------- |
-| 1, columna 1 | Jesus Carvajal | 2900177 |
-| 2, columna 1 | Santiago | 2900177 |
-| 3, columna 1 | Nicolai| 2900177 |
+| columna 1 | Jesus Carvajal | 2900177 |
+| columna 1 | Santiago | 2900177 |
+|  columna 1 | Nicolai| 2900177 |
 
 # Insertar imagen 
 ![Ver imagen](../../../git/dia-de-goku.jpg)
