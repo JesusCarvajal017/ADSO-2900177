@@ -26,5 +26,8 @@ alert('hola mundo')
 | 2, columna 1 | Santiago | 2900177 |
 | 3, columna 1 | Nicolai| 2900177 |
 
+# Insertar imagen 
+![Ver imagen](../../../git/dia-de-goku.jpg)
+
 
 
