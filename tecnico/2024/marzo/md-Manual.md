@@ -20,14 +20,25 @@ alert('hola mundo')
 
 # tablas
 
-| N° | Nombres | ficha |  |
-| --------- | --------- | --------- |
+| N° | Nombres | ficha |
+| --- | --- | --- |
 | columna 1 | Jesus Carvajal | 2900177 |
 | columna 1 | Santiago | 2900177 |
-|  columna 1 | Nicolai| 2900177 |
+| columna 1 | Nicolai| 2900177 |
 
 # Insertar imagen 
 ![Ver imagen](../../../git/dia-de-goku.jpg)
+
+# listas
+
+* javaScript
+* php
+* python
+
+# Estilo de textos
+
+| Estilo :+1: | Sintaxis | Ejemplo |
+| --- | --- | --- |
 
 
 
