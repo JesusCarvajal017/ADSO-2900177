@@ -1,4 +1,0 @@
-
-
-falta instalar mongo con configuración usuario
-
