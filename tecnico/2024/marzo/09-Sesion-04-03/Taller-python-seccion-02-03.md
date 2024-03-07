@@ -93,6 +93,7 @@
     if numero > 200:
         print("El numero", numero, "es mayor a 200 ")
     else : 
+        print("El numero", numero, "es menor o igual a 200)
 
 ```
 
