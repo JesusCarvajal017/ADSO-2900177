@@ -3,20 +3,20 @@
 
 ```
   Inicio
-    Definir p1,p2,p3,ope como Real
+    Definir p1,p2,p3,operacion como Real
     prs1 = 0.0
     prs2 = 0.0
     prs3 = 0.0
-    ope =  0.0
+    operacion =  0.0
   
-    Escribir "Digite la cantidad que invirtio la primera persona " ;
+    Escribir "Digite la cantidad que invirtió la primera persona " ;
     Leer prs1;
-    Escribir "Digite la cantidad que invirtio la segunda persona ";
+    Escribir "Digite la cantidad que invirtió la segunda persona ";
     Leer prs2;
-    Escribir "Digite la cantidad que invirtio la tercera persona ";
+    Escribir "Digite la cantidad que invirtió la tercera persona ";
     Leer prs3;
   
-    ope = prs1 + prs2 +prs3;
+    operacion = prs1 + prs2 +prs3;
   
     prs1  = (prs1*100)/ope;
     prs2  = (prs2*100)/ope;
@@ -30,14 +30,16 @@
 
 ```
 
+
 **2.** Un alumno desea saber cuál será su promedio general en las tres materias más difíciles que cursa y cuál será el promedio que obtendrá en cada una de ellas.
    Estas materias se evalúan como se muestra a continuación:
 
-    * La calificación de Matemáticas se obtiene de la siguiente manera: *Examen 90% Promedio de tareas 10% En esta materia se pidió un total de tres tareas.*
-    
-    * La calificación de Física se obtiene de la siguiente manera: *Examen 80% Promedio de tareas 20% En esta materia se pidió un total de dos tareas.*
-    
-    * La calificación de Química se obtiene de la siguiente manera: *Examen 85% Promedio de tareas 15% En esta materia se pidió un promedio de tres tareas.*
+  * La calificación de Matemáticas se obtiene de la siguiente manera: `Examen 90% Promedio de tareas 10% En esta materia se pidió un total de tres tareas.`
+  
+  * La calificación de Física se obtiene de la siguiente manera: `Examen 80% Promedio de tareas 20% En esta materia se pidió un total de dos tareas.`
+  
+  * La calificación de Química se obtiene de la siguiente manera: `Examen 85% Promedio de tareas 15% En esta materia se pidió un promedio de tres tareas.`
+
 
 ```
 Inicio
@@ -121,7 +123,7 @@ Fin
 Inicio
   Definir num Como Real;
   num = "";
-  Escribir "Diguite un número ya sea positivo o negativo";
+  Escribir "Digite un número para ser evaluado: ";
   Leer num
   si num > 0 Entonces
     Escribir num," Es positivo";
