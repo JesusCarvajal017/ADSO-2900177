@@ -11,7 +11,7 @@ Se documentarán cinco ejercicios de diagramas de flujo, cada uno será descrito
 * El objetivo
 * Solución 
 
-[!IMPORTANT]
+>[!IMPORTANT]
 > Los diagramas representan simplemente un esbozo de la idea principal, ya que para desarrollarla de manera más completa, es necesario trasladarla a un lenguaje de programación que nos proporcione las herramientas adecuadas.
 
 ## 1. Plataforma de registro personal
@@ -36,7 +36,7 @@ El objetivo de mi sistema es gestionar de forma exhaustiva y ordenada la informa
 ## Diagrama de flujo
 
 
-[!NOTE]
+>[!NOTE]
 > Dado el tamaño del diagrama, la visualización puede resultar incómoda. Por lo tanto, se recomienda copiar el pseudocódigo en PSeInt para una mejor apreciación.
 
 ![Ver imagen](/tecnico/2024/abril/01-diagramas-complejos/img/digrama_registro.png)
