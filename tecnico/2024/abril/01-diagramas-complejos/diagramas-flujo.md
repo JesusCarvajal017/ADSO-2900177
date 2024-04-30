@@ -553,7 +553,70 @@ Con este fin, se ha creado un sistema que calcula las áreas de las figuras espe
     FinAlgoritmo
 
 ```
----
+
+## 6. Bingo 
+
+#### Descripción y planteamiento
+
+------------------------------------------------------------------------------------------
+
+
+1. Problematica: 
+Para muchos programadores, trabajar con matrices puede resultar complicado debido a la naturaleza abstracta de estas estructuras de datos. Especialmente para aquellos que están comenzando en el mundo de la programación, entender cómo interactuar con matrices puede ser un desafío. Una de las maneras más efectivas de abordar este problema es proporcionar herramientas que faciliten la comprensión y la práctica de los conceptos relacionados con las matrices.
+
+2. Objetivo
+El propósito de este ejercicio es utilizar la generación de un tablero de bingo interactivo como una herramienta para que el usuario practique las tablas de multiplicar. Mediante la introducción de un dígito por parte del usuario, este se relacionará con una tabla de multiplicar específica. Luego, estas tablas se utilizarán para crear las filas y columnas del tablero de bingo.
+
+3. Solucion
+
+- nombre del la plataforma: bingoCode
+
+## Diagrama de flujo
+
+
+>[!NOTE]
+> Para mejor visualización puede desplegar el diagrama en el programa pseint con el respectivo codigo
+
+![Ver imagen](/tecnico/2024/abril/01-diagramas-complejos/img/bingo.png)
+
+* pseudocódigo: 
+
+```
+    Algoritmo bingoflujo
+        Definir tabla, result Como Entero
+        contador = 0
+        conTa = 0
+        Imprimir "Binvenido al generador de bingos con las tablas de multiplicar"
+        Imprimir "..............................................................."
+        Imprimir "Digite la tabla que con la que desea general el bingo: "
+        leer tabla
+        
+        //generamos las tablas y las guardamos
+        Dimension bingo[5,5]
+        Dimension tablaMul[25]
+        Para i = 0 Hasta 25 - 1 Con Paso 1 Hacer
+            result = tabla * (i + 1)
+            tablaMul[i] = result
+        Fin Para
+        
+        Para i = 0 Hasta 5 - 1 con paso 1 Hacer
+            Para in = 0 Hasta 5 - 1 Con Paso 1 Hacer
+                bingo[i,in] = tablaMul[conTa] 
+                conTa = conTa + 1
+            Fin Para
+        Fin Para
+        
+        Imprimir "B     I     N      G      O"    
+        Para i = 0 Hasta 5 - 1 Con Paso 1 Hacer
+            Para in = 0 Hasta 0 Con Paso 1 Hacer
+                Imprimir  bingo[i,0],"     ", bingo[i,1],"     ",bingo[i,2],"   ", bingo[i,3], "   ",bingo[i,4]
+            Fin Para
+        Fin Para
+    FinAlgoritmo
+
+```
+
+
 ## n. nombre del proyecto
 
 #### Descripción y planteamiento
