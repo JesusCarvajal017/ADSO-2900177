@@ -617,7 +617,7 @@ El propósito de este ejercicio es utilizar la generación de un tablero de bing
 ```
 
 
-## n. nombre del proyecto
+## 7. 
 
 #### Descripción y planteamiento
 
@@ -625,15 +625,14 @@ El propósito de este ejercicio es utilizar la generación de un tablero de bing
 
 
 1. Problematica: 
-
-
+Los niños menores de 6 años están en una etapa educativa en la que están comenzando a aprender el lenguaje y los conceptos básicos de los números. ¿Pero podrán diferenciar o comprender qué significa que un número sea mayor que otro?
 
 2. Objetivo
-
+Nuestra aplicación tiene como objetivo permitir que los niños interactúen y comprendan mediante la metodología de la repetición
 
 3. Solucion
 
-- nombre del la plataforma: notaFacil
+- nombre del la plataforma: plusMinus
 
 ## Diagrama de flujo
 
@@ -641,12 +640,256 @@ El propósito de este ejercicio es utilizar la generación de un tablero de bing
 >[!NOTE]
 > Para mejor visualización puede desplegar el diagrama en el programa pseint con el respectivo codigo
 
-![Ver imagen](/imaginedeldiagrama)
+![Ver imagen](/tecnico/2024/abril/01-diagramas-complejos/img/plusMinus.png)
 
 * pseudocódigo: 
 
 ```
-    codigo
+    Algoritmo numeroMayore
+        Definir long Como Entero
+        Definir nmayor, nmenor Como Real
+        Imprimir "-------------- Numero mayor y menor -------------------"
+        Imprimir "Ingrese la cantidad de numeros a evaluar: "
+        Repetir
+            leer long
+        Hasta Que long > 0
+        Dimension numbers[long]
+        Imprimir "============================================="
+        Para i = 0 Hasta long - 1 Con Paso 1 Hacer
+            Imprimir "Ingrese el numero ", i + 1
+            leer numbers[i]
+        Fin Para
+        
+        nmayor = numbers[0]
+        nmenor = numbers[0]
 
+        Para i = 1 Hasta long - 1 Con Paso 1 Hacer
+            si numbers[i] > nmayor Entonces
+                nmayor = numbers[i]
+                
+            SiNo
+                nmayor = nmayor
+            FinSi
+            
+            si numbers[i] < nmenor Entonces
+                nmenor = numbers[i]
+                
+            SiNo
+                nmenor = nmenor
+            FinSi
+        
+        Fin Para
+        
+        Imprimir "numero mayor " ,nmayor
+        Imprimir "numero menor " ,nmenor
+        
+        
+    FinAlgoritmo
 ```
 
+## 8. Numero primos
+
+#### Descripción y planteamiento
+
+------------------------------------------------------------------------------------------
+
+
+1. Problematica: 
+Conocemos que los números primos son escasos. La cuestión es: ¿cómo podemos validar si un número es primo?
+2. Objetivo
+La idea es que nuestra aplicación sea capaz de verificar si un número es primo, independientemente de su rango.
+3. Solucion
+
+- nombre del la plataforma: primos
+
+## Diagrama de flujo
+
+
+>[!NOTE]
+> Para mejor visualización puede desplegar el diagrama en el programa pseint con el respectivo codigo
+
+![Ver imagen](/tecnico/2024/abril/01-diagramas-complejos/img/numeroPrimos.png)
+
+* pseudocódigo: 
+
+```
+    Algoritmo numPrimos
+        Definir numEv, contador, primo, compuesto Como Entero
+        contador <- 0
+        primo <- 0
+        compuesto <- 0
+        Escribir 'Ingrese su numero para encontra numeros primos: '
+        Leer numEv
+        Dimensionar numbers(numEv)
+        Dimensionar numbers2(numEv)
+        Escribir '..............................................'
+        Para i<-1 Hasta numEv Con Paso 1 Hacer
+            Si numEv MOD i==0 Entonces
+                numbers[primo] <- i
+                primo <- primo+1
+            FinSi
+        FinPara
+        Si primo<3 Entonces
+            Para i<-0 Hasta primo-1 Con Paso 1 Hacer
+                Escribir numbers[i], ' primo ', numEv
+            FinPara
+        SiNo
+            Imprimir numEv, " No es un numero primo, tiene mas de dos divisores"
+        FinSi
+    FinAlgoritmo
+```
+
+## 9. salario
+
+#### Descripción y planteamiento
+
+------------------------------------------------------------------------------------------
+
+
+1. Problematica: 
+Calcular el salario puede parecer una tarea sencilla, ¿verdad? Sin embargo, ¿te has preguntado alguna vez por qué seguimos utilizando métodos manuales cuando la tecnología nos ofrece la capacidad de automatizarlo con solo dos datos?
+2. Objetivo
+¡Prepárate para descubrir la solución a un problema que, aunque parece insignificante, puede hacernos perder un tiempo valioso! Con este programa innovador, olvídate de las complicaciones y los cálculos tediosos. ¿Te imaginas solo tener que proporcionar el valor diario y la cantidad de días trabajados al mes?
+3. Solucion
+
+- nombre del la plataforma: salarioRapido
+
+## Diagrama de flujo
+
+
+>[!NOTE]
+> Para mejor visualización puede desplegar el diagrama en el programa pseint con el respectivo codigo
+
+![Ver imagen](/tecnico/2024/abril/01-diagramas-complejos/img/salario.png)
+
+* pseudocódigo: 
+
+```
+    Algoritmo salarioFlujo
+        Definir salario,sueldo,valorDia,sueloB,salud,pension,arl Como Real
+        Definir diasTrabajados Como Entero
+        Definir nombrePersona Como Cadena
+            
+        Imprimir ".......calculador de sueldo......."
+        Imprimir "¿Como te llamas?"
+        leer nombrePersona
+        Imprimir ".................................."
+        Imprimir "Cuantos dias trabajas al més ", nombrePersona, ":"
+        leer diasTrabajados
+        Imprimir "...................................."
+        Imprimir "Cual es la remuneración correspondiente en un día ", nombrePersona, ":"
+        leer valorDia
+        Imprimir "...................................."
+        suledoB = valorDia * diasTrabajados
+        Imprimir "Señ@ ", nombrePersona, " su salario bruto es de: ", suledoB
+        salud = 0.12 * suledoB
+        pension = 0.16 * suledoB
+        arl = 0.052 * suledoB
+        Imprimir "............................................."
+        Imprimir "El porcentaje de la salud es de: ", salud
+        Imprimir "El porcentaje de la pension es de: ", pension
+        Imprimir "El porcentaje de la arl es de: ", arl
+        Imprimir "............................................."
+        Imprimir "Su sueldo final es de: "
+        Imprimir suledoB - (salud + pension + arl)
+        
+    FinAlgoritmo
+```
+
+## 10. Conversion de dinero
+
+#### Descripción y planteamiento
+
+------------------------------------------------------------------------------------------
+
+
+1. Problematica: 
+En ocasiones, nos encontramos en situaciones apremiantes debido a la necesidad de realizar conversiones monetarias entre diferentes monedas, especialmente considerando nuestro contexto. Una de las conversiones más comunes que solemos realizar es entre pesos colombianos y dólares, o viceversa. Tradicionalmente, la forma en que abordamos esta necesidad es a través de métodos poco eficientes, como hacer cálculos a mano o recurrir a búsquedas en Google para obtener la tasa de cambio actualizada.
+2. Objetivo
+Nuestra idea es que nuestro programa no solo pueda calcular grandes cifras, sino que también tenga la capacidad de convertirlas a la moneda de preferencia del usuario. ¿No sería genial simplificar y mejorar este proceso?"
+3. Solucion
+
+- nombre del la plataforma: ConverMon
+
+## Diagrama de flujo
+
+
+>[!NOTE]
+> Para mejor visualización puede desplegar el diagrama en el programa pseint con el respectivo codigo
+
+![Ver imagen](/tecnico/2024/abril/01-diagramas-complejos/img/conversionDinero.png)
+
+* pseudocódigo: 
+
+```
+   Algoritmo conversorDinero
+        Definir pColombiano, pDolar Como Real
+        const <- 3914
+        Escribir 'Pesos colombianos -> Dolares'
+        Escribir '1. Pesos colombianos a dolar'
+        Escribir '2. Dolares a pesos colombianos'
+        Leer option
+        Según option Hacer
+            1:
+                Escribir 'Cantidad de pesos colombianos:'
+                Leer pColombiano
+                resul <- pColombiano/const
+                Escribir '$', pColombiano, ' ->', redon(resul), 'USD'
+            2:
+                Escribir 'Cantidad de dolares:'
+                Leer pDolar
+                resul <- pDolar*const
+                Escribir 'USD', pDolar, ' -> $', redon(resul)
+            De Otro Modo:
+                Escribir 'opcion no valida'
+        FinSegún
+    FinAlgoritmo
+```
+
+## 10. serie fibonacci
+
+#### Descripción y planteamiento
+
+------------------------------------------------------------------------------------------
+
+
+1. Problematica: 
+En realidad, no hay un problema, pero sabemos que los cálculos humanos en nuestra época tienen un límite, ya que las grandes operaciones matemáticas son realizadas por las máquinas. Entonces, ¿por qué no dejarles eso a ellas? Sabiendo que pueden descubrir números que nunca antes se habían alcanzado manualmente.
+2. Objetivo
+
+El propósito de este pequeño programa es generar la secuencia de la serie de Fibonacci hasta cualquier número límite que permita la capacidad de la máquina.
+3. Solucion
+
+- nombre del la plataforma: fibo
+
+## Diagrama de flujo
+
+
+>[!NOTE]
+> Para mejor visualización puede desplegar el diagrama en el programa pseint con el respectivo codigo
+
+![Ver imagen](/tecnico/2024/abril/01-diagramas-complejos/img/serieFibonacci.png)
+
+* pseudocódigo: 
+
+```
+   Algoritmo SerieFibonacciConArreglos
+        // Serie de Fibonacci con Arreglos
+        Imprimir 'Cuantos numeros de la serie de Fibonacci deseas: '
+        Leer tamanio_arreglo
+        // Creamos el arreglo
+        Definir arreglo Como Entero
+        Dimension arreglo[tamanio_arreglo]
+        // Los primeros dos valores son 1 y 1
+        arreglo[0] = 1
+        arreglo[1] = 1
+        Para i = 2 Hasta tamanio_arreglo - 1 Hacer
+            arreglo[i] = arreglo[i-2] + arreglo[i-1]
+        FinPara
+        //Imprimimos los valores recorriendo nuevamente el arreglo
+        Para i = 0 Hasta tamanio_arreglo - 1 Hacer
+            Imprimir i + 1, '. Valor de la serie  [', i, '] = ', arreglo[i]
+        FinPara
+        
+    FinAlgoritmo
+```
