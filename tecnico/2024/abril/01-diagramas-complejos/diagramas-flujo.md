@@ -846,7 +846,7 @@ Nuestra idea es que nuestro programa no solo pueda calcular grandes cifras, sino
     FinAlgoritmo
 ```
 
-## 10. serie fibonacci
+## 11. serie fibonacci
 
 #### Descripción y planteamiento
 
