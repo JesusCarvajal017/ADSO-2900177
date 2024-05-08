@@ -1,163 +1,187 @@
-/**
- * Autor: Esteban Palomar
- * Creación: Jesus Carvajal, Esteban Palomar
- */
-
-// cantidad de personas
-let cantidadP = 0;
-
-// precios fijos de barberos
+// :::::::::::: rangos de conteo para validacion ::::::::::::
+let rangoMenu = /^[1-3]$/; // rango de 1 a tres
+let rangoF = /^[1-2]$/; // rango de 1 a tres
+let rangoFactu = /^[1-4]$/; // rango de 1 a tres
+let rangoHora = /^(1[0-9]|1[89]|8|9)$/; // rango de 1 a tres
+let rangoSuperior = /^[1-9]\d*$/; // todo numero entero positivo mayor a 0
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// variables de apoyo
+let opcionPrincipal;
+let clientes;
+let nombreAp; // nombre y apellido de persona
+let menuBarberos;
+let pantalla;
+let opcion;
+let cliente;
+let facturacion = "";
+let opcionFactura;
+let facturaIndividual = ""; 
+let barberoLocation;
+let infoFactura = "";
+let optfinish;
+let ganacialocal;
+let ganaciaTotal = 0;
+let montoDinero = [];
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// mensajes de pantalla validaciones, errores etc
+let erorNumber = "Valor invalido, intente nuevamente";
+let errorNombre = "Formato o tipo no valido"
+let fueraRg = "Recuerde que el horario es de 8 -19, intente nuevamente";
+let peticionClientes ="¿Cuantos clientes desean reservar una cita?";
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 const precioCombo1 = 15000;
 const precioCombo2= 20000;
-const precioCombo3 = 250000;
-
-// variables de sostenimiento
-let b1 = 0;
-let b2 = 0;
-let b3 = 0;
-let formatoNombre;
-let menu;
-let hora;
-
-// menu de barberos
-let menuBarberos = `\n 1.Barbero Arnol(Basico) precio: ${precioCombo1}\n 2. Barbero Jhoan(Especializado) precio : ${precioCombo2}\n 3. Barbero Manuel(profesional) precio: ${precioCombo3}\n`;
-let cantidadPersonas = "¿Cuantos clientes desean reservar una cita?";
-let erroValue = "Valor invalido, intente de nuevo";
-let nombreCliente = "¿Cual es el nombre y apellido del cliente :";
-
-
-// datos barberia
-let personas = [];
-let barberos = [
-    [0],
-    [0],
-    [0]
+const precioCombo3 = 25000;
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ...... data de la barberia .........
+let barberia = [
+    {
+        nombre_barbero: 'Arnol',
+        nivel_profesion: 'Basico',
+        precio_servicio: precioCombo1,
+        clientes: [],
+        gananciaTotal: 100000
+    },
+    {
+        nombre_barbero: 'Jhoan',
+        nivel_profesion: 'Especializado',
+        precio_servicio: precioCombo2,
+        clientes: [],
+        gananciaTotal: 100000
+    },
+    {
+        nombre_barbero: 'Manuel',
+        nivel_profesion: 'Profesional',
+        precio_servicio: precioCombo3,
+        clientes: [],
+        gananciaTotal: 100000
+    },
 ];
 
-let horario = [
-    [],
-    [],
-    []
-];
-
-let nombreBarberos = [
-    ["Arnol Martínez (Basico)", precioCombo1],
-    ["Jhoan Lópezm (Especializado)", precioCombo2],
-    ["Manuel Carvajal (Profesional)", precioCombo3]
-]
-
-// Inicio del programa
+let userPeticion = [];
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// inicio del programa
 alert("Bienvenido a la Barbería SOLO MACHOS");
-// cantidad de personas a registrar
-cantidadP = valorCorrecto(cantidadPersonas);
+clientes = numberValidar(peticionClientes,erorNumber);
 
-// registrar personas
-for(let i = 0; i < cantidadP; i++){
-    formatoNombre = "";
+for(let i = 0; i<clientes; i++){
+    let msj = `NOMBRE Y APELLIDO del cliente N° ${i + 1}: `;
+    let info = "";
+    let pase = true;
     do{
-        const inputMessage = formatoNombre === "" ? `${nombreCliente} ${i + 1}?` : `${nombreCliente}${i + 1}\n${erroValue}?`;
-        let nombre = prompt(inputMessage)
-        formatoNombre = nombreCorrecto(nombre);
-    }while(formatoNombre == false);
-
-    personas.push(formatoNombre) 
+        info = pase == true ? msj : `${msj}\n\n${errorNombre}`
+        pantalla = prompt(info)
+        nombreAp = nombreCorrecto(pantalla);
+        pase = nombreAp == false ? false : true;
+    }while(nombreAp == false)
+    
+    userPeticion.push(nombreAp)
 }
 
-for(let i = 0; i < personas.length; i++){
-    menu = 0;
-    // Eleccion de barbero por parte del usuario
-    do{
-        let inputMessage = menu === 0 ? `${personas[i]}\n${menuBarberos}` : `${personas[i]}\n${menuBarberos}\n${erroValue}`;
-        const input = prompt(`Señ@: ${inputMessage}`);
-        menu = validationNumber(input);
-    }while(menu <= 0 || menu > 3)
+for(let i = 0; i < userPeticion.length; i++){
+    let salida = `Estimado cliente ${userPeticion[i]} escoja su barbero:\n`;
+    barberia.forEach((data, i)=>{
+        salida += `${i + 1}. ${data.nombre_barbero} (${data.nivel_profesion}) $${data.precio_servicio}\n`;
+    });
+    opcion = numberValidar(salida,erorNumber,rangoMenu);
+    cliente = { nombre: userPeticion[i], hora_agendada: 0};
+    barberia[opcion - 1].clientes.push(cliente);
+}
 
-    // REGISTRO DE CLIENTES A LOS BARBEROS   
-    if(menu == 1){
-        barberos[0][b1] = personas[i];
-        b1++;
-    }else if(menu == 2){
-        barberos[1][b2] = personas[i];
-        b2++;
+barberia.forEach((data,i)=>{
+    alert(`Angendamiento del barbero ${data.nombre_barbero} (${data.nivel_profesion} :`);
+    if(data.clientes.length == 0){
+        alert("No tiene clientes")
     }else{
-        barberos[2][b3] = personas[i]; 
-        b3++;
-    }
-}
-
-for(let i = 0; i < barberos.length; i++){
-    alert(`Agendamiento del barbero ${i +1} :`);
-    let h1 = 0;
-    // agendamiento de citas para cortes
-    for(let m = 0; m < barberos[i].length; m++){
-        // verificion de clientes 0 clientes
-        if(barberos[i][m] == 0){
-            horario[i][m] = 0;
-            alert(`El barbero ${i + 1} no tiene clientes`)
-            break; 
-        }else{
-            let horaAngendamiento = `Por favor, ${barberos[i][m]} ingrese la hora de la reserva (en formato militar - De 8 a 19 horas): `;
-            do{
-                if(hora < 8 || hora > 19){
-                    notaInvalida = `\n\nHora fuera de servicio`
-                }else{
-                    notaInvalida = ``;
-                }
-                hora = valorCorrecto(horaAngendamiento + notaInvalida);
-            }while(hora < 8 || hora > 19);
-            horario[i][h1] = hora
-
-            if(horario[i].length == 1){
-                // console.log("No porque comparar")
+        data.clientes.forEach((cliente, i) =>{
+            let msj = `Estimado cliente ${cliente.nombre} ingrese la hora de la reserva\n(en formato militar - De 8 a 19 horas):`;
+            let hora = numberValidar(msj,fueraRg, rangoHora);
+            cliente.hora_agendada = hora; 
+            if(i == 0){
+                console.log('no hay necesidad de comparar')
             }else{
-                if(horario[i].includes(hora)){
-                    let horaAngendamiento = `Por favor, ${barberos[i][m]} ingrese la hora de la reserva (en formato militar - De 8 a 19 horas): \nBarbero no disponible a esa hora`;
+                if(data.clientes[i - 1].hora_agendada == hora){
+                    let msj = `Estimado cliente ${cliente.nombre} ingrese la hora de la reserva\n(en formato militar - De 8 a 19 horas):\nLa hora dada ya esta resservada por otro cliente`;
                     do{
-                        if(hora < 8 || hora > 19){
-                            notaInvalida = `\n\nHora fuera de servicio`
-                        }else{
-                            notaInvalida = ``;
-                        }
-                        hora = valorCorrecto(horaAngendamiento + notaInvalida);
-                    }while(hora < 8 || hora > 19 || hora == horario[i][m]);
-                    horario[i][h1] = hora
+                        hora = numberValidar(msj,fueraRg, rangoHora);
+                    }while(hora == data.clientes[i - 1].hora_agendada); 
+                    cliente.hora_agendada = hora;
                 }else{
-                    console.log("El barbero esta desocupado, si puedes")
+                    console.log('hora disponible');
                 }
             }
-            h1++;
-        }
-    };
-}
+        })
+    }
+});
+// ganacias recolectadas
+barberia.forEach((data)=>{
+    let monto =  data.clientes.length  * data.precio_servicio;
+    montoDinero.push(monto);
+});
+// sumatoria de ganacias totales 
+for(let i = 0; i<montoDinero.length; i++){
+    ganaciaTotal += montoDinero[i]; 
+};
+// menu de inventario 
+do{
+    infoFactura = "";
+    facturacion = `========== Inventario de la barberia ==========\n`;
+    facturacion += `Ganacias individuales: \n`;
+    barberia.forEach((data, i) =>{
+        facturacion += `${i + 1}. ${data.nombre_barbero} (${data.nivel_profesion})\n`;
+    });
+    facturacion += `========== ganacia global ========== \n`;
+    facturacion += `4. Ganancia total de la barberia`;
 
-// let inverntario
-// for(let i = 0; i < barberos.length; i++){
-//     for(let im = 0; i < barberos[i].length; im++){
-        
-//     }
-// }
+    opcionFactura = numberValidar(facturacion,erorNumber,rangoFactu)
+    // indiceB = opcionFactura - 1;
+    barberoLocation = barberia[opcionFactura - 1];
 
-// ==================================  metodos de validacion y más  ==========================================
-function validationNumber(input){
-    if (/^[1-9]\d*$/.test(input)) { // /^\d+$/ expresion regular que verifica que sean numeros
+    if(opcionFactura == 4){
+        barberia.forEach((data, i)=>{
+            infoFactura += `========== ganacias totales ===========\n`;
+            infoFactura += `${data.nombre_barbero} : clientes: ${data.clientes.length}  -- ganacia generada: $${montoDinero[i]}\n`;
+        });
+        infoFactura+= `......................................................................`
+        infoFactura+=`\n ganacias total de la barberia: $${ganaciaTotal}`;
+        infoFactura+= `......................................................................`
+        infoFactura += `\nPara volver al menu de facturación digite 1, si quiere salir de todo el sistema 2:`;
+    }else{
+        infoFactura += `======= Barbero: ${barberoLocation.nombre_barbero} (${barberoLocation.nivel_profesion}) ======\n`;
+        infoFactura += `Precio del servicio : ${barberoLocation.precio_servicio}\n`; 
+        barberoLocation.clientes.forEach((data, i)=>{
+            infoFactura += `${i + 1}. ${data.nombre}\n -> Hora de reserva: ${data.hora_agendada}:00\n`;
+        });
+        ganacialocal = barberoLocation.precio_servicio * barberoLocation.clientes.length; 
+
+        infoFactura += `\nganacias del barbero: $${ganacialocal}\n`; 
+        infoFactura += `\nPara volver al menu de facturación digite 1, si quiere salir de todo el sistema 2:`;
+    }
+    optfinish = numberValidar(infoFactura,erorNumber,rangoF)
+}while(optfinish == 1)
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// funciones complementarias al programa
+// -----> funcion que valida un tipo numerico segun su expresion regular
+function validationNumber(input,rango){
+    if (rango.test(input)) { // /^\d+$/ expresion regular que verifica que sean numeros
         result = parseFloat(input);
     } else {
         result = false; 
     }
     return result;
 }
-
-function valorCorrecto(mensaje){
-    let number = 0;
+function numberValidar(mensaje,msjError,rangox = /^[1-9]\d*$/){
+    let pase = true;
+    let info;
     do{
-        const inputMessage = number === 0 ? mensaje : `${mensaje}\n${erroValue}`;
-        const input = prompt(inputMessage);
-        number = validationNumber(input);
-    }while(number == false);
+        info = pase === true ? mensaje : `${mensaje}\n\n${msjError}`;
+        let input = prompt(info);
+        resultado = validationNumber(input,rangox);
+        pase = resultado == false ? false : true;
+    }while(resultado == false);
 
-    return number;
+    return resultado;
 }
-
 function nombreCorrecto(input){
     if (/^[a-zA-Z]+\s[a-zA-Z]+$/.test(input)) {
         result = input;
