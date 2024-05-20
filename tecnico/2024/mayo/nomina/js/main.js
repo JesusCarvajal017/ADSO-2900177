@@ -8,8 +8,11 @@
 let iteracion1; 
 let iteracion2;
 let sueldo;
-let resultado;
+let resultado = 0;
 let persona;
+let salarioM = 1300000;
+let retencioG;
+let salarioFinial = 0;
 
 // variables de ejecucion
 
@@ -24,6 +27,43 @@ function pretaciones(sueldoP, porcentaje){
     return resultado;
 }
 
+function subTransporte(sueldoP){
+    if(sueldoP <= salarioM*2){
+        resultado = 114000; 
+    }else{
+        resultado = 0;
+    }
+
+    return resultado;
+}
+
+function abonosNomina(salarioP, estratoP){
+    if(salarioP <= salarioM && (estratoP == 1 || estratoP == 2)){
+        resultado = 100000;
+    }else{
+        resultado = 0;
+    }
+    return resultado;
+}
+
+function retencionNomina(salarioP, estratoP){
+    retencioG = 0;
+    if(salarioP >= salarioM*8 && estratoP == 6){
+        retencioG = 0.05;
+    }
+    else if(salarioP > salarioM*4){
+        retencioG = 0.03;
+    }
+    else if(salarioP > salarioM*6){
+        retencioG = 0.04;
+    }else{
+        retencioG = 0;
+    }
+    resultado = salarioP * retencioG;
+
+    return resultado;
+}
+
 
 // data de la nomina personas
 let nomina = [
@@ -34,17 +74,17 @@ let nomina = [
         apellidos: 'Carvajal Anacona',
         edad: 17,
         estrato: 1,
-        valorDia: 30000,
+        valorDia: 3000,
         diasTrabajados: 30,
     },
     {
-        tipoIdentificacion: 'T.i',
+        tipoIdentificacion: 'T.I',
         numeroIdentificacion: 1087653575,
         nombres: 'Juan Manuel',
         apellidos: 'Gutierrez',
         edad: 16,
         estrato: 1,
-        valorDia: 30000,
+        valorDia: 500000,
         diasTrabajados: 30,
        
     },
@@ -55,7 +95,7 @@ let nomina = [
         apellidos: 'Guerrero',
         edad: 25,
         estrato: 1,
-        valorDia: 30000,
+        valorDia: 800000,
         diasTrabajados: 30,
        
     },
@@ -64,29 +104,29 @@ let nomina = [
 let pagoNomina = [];
 
 nomina.forEach(data=>{
+    // persona = {};
     persona = {
         nombre: data.nombres,
         apellidos: data.apellidos,
         edad: data.edad,
-        estrato: data.estrato,
+        estratoP: data.estrato,
         valorDias: data.valorDia,
         diasTrabajados: data.diasTrabajados,
-        salario: calSueldo(data.valorDia, data.diasTrabajados), 
-        salud: pretaciones(this.sueldo, 0.12) ,
-        pension: pretaciones(this.sueldo, 0.13),
-        arl: pretaciones(this.sueldo, 0.052),
-        retencion: 0
+        salario: calSueldo(data.valorDia, data.diasTrabajados)
     };
 
+    persona.salud= pretaciones(persona.salario, 0.12),
+    persona.pension= pretaciones(persona.salario, 0.13),
+    persona.arl= pretaciones(persona.salario, 0.052),
+    persona.transporte= subTransporte(persona.salario),
+    persona.abonos= abonosNomina(persona.salario, persona.estratoP),
+    persona.retencion= retencionNomina(persona.salario, persona.estratoP)
+
+    salarioFinial = (persona.salario - (persona.arl + persona.salud + persona.pension)) + (persona.transporte + persona.abonos)
+
+    persona.sueldoLibre = salarioFinial;
     pagoNomina.push(persona);
 })
 
+
 console.log(pagoNomina)
-
-// for(iteracion1 = 0; iteracion1<nomina.length; iteracion1++){
-//     // for(iteracion2 = 0; iteracion2<nomina[iteracion1].length; iteracion2++){
-//         console.log(nomina[iteracion1].nombres);
-//     // }
-// }
-
-// funciones de apoyo
