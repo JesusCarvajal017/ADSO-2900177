@@ -4,3 +4,32 @@ Autor: Jesus Fernanco carvajal anacona
 Fecha creacion: 20 de mayo de 2024
 */
 
+/* styles generales */
+.prncpal-tblprdica{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+
+.info-elemento{
+    border: 1px solid #000000;
+    margin: 5px;
+}
+
+.tabla-periodica{
+    margin: 5px;
+    border: 1px solid #000000;
+    /* margin: 10px; */
+    /* width: inherit !important; */
+}
+
+.span-columns{
+    /* width: 20px !important; */
+    height: 30px;
+}
+
+.nvles-enrgia{
+    height: 60px !important;
+    /* width: 20px !important; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
