@@ -1,35 +1,129 @@
 /*
-Titulo: Tabla periodica
-Autor: Jesus Fernanco carvajal anacona
-Fecha creacion: 20 de mayo de 2024
+    Titulo: Tabla periodica
+    Autor: Jesus Fernanco carvajal anacona
+    Fecha creacion: 20 de mayo de 2024
 */
 
-/* styles generales */
-.prncpal-tblprdica{
+:root{
+    --metales-alcalinos: #FF6F06;
+    --alcalinoterraneos: #ff5100;
+    --otros-metales: #84339c;
+    --metales-transicion: #fa34a4;
+    --lantanidos: #279C1E; 
+    --actinidos: #DCEF41; 
+    --metaloides: #B5C483;
+    --no-metales: #da2f90;
+    --halogenos: #C1F953; 
+    --gases-nobles: #32dbf1;
+}
+
+/* .container{
+    border: 1px solid;
+} */
+
+.celdas{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.celdas div.col-2{
+    padding: 0;
+    margin: 0;
+}
+.elemento{
+    width: 71px;
+    height: 75px;
+    margin: 1px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.elemento{
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 20px 13px 25px 15px;
+    overflow: hidden;
+
 }
 
-
-.info-elemento{
-    border: 1px solid #000000;
-    margin: 5px;
+.elemento div.col-12{
+    /* padding: 5px; */
 }
 
-.tabla-periodica{
-    margin: 5px;
-    border: 1px solid #000000;
-    /* margin: 10px; */
-    /* width: inherit !important; */
+.masa-atomic{
+    font-size: 12px;
 }
 
-.span-columns{
-    /* width: 20px !important; */
-    height: 30px;
+.numero-atomic{
+    font-size: 11px;
+    font-weight: 800;
+    text-align: end;
+    padding-right: 3px;
 }
 
-.nvles-enrgia{
-    height: 60px !important;
-    /* width: 20px !important; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.densidad{
+    font-size: 11px;
+}
+
+.electro{
+    font-size: 12px;
+    font-size: 8px;
+    text-align: end;
+}
+
+.simbol{
+    grid-column: 1/3;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.name-element{
+    grid-column: 1/3;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --------------------------- colores de los elementos --------------------------- */
+
+.no-metales{
+    background-color: var(--no-metales);
+}
+.gases-nobles{
+    background-color: var(--gases-nobles);
+}
+.halogenos{
+    background-color: var(--halogenos);
+}
+.metales-alcalinos{
+    background-color: var(--metales-alcalinos);
+}
+.alcalinoterraneos{
+    background-color: var(--alcalinoterraneos);
+}
+.metaloides{
+    background-color: var(--metaloides);
+}
+.otros-metales{
+    background-color: var(--otros-metales);
+}
+.lantanidos{
+    background-color: var(--lantanidos);
+}
+.actinidos{
+    background-color: var(--actinidos);
+}
+.metales-transicion{
+    background-color: var(--metales-transicion);
+}
+.no-metales{
+    background-color: var(--no-metales);
+}
+.no-metal{
+    background-color: var(--no-metal);
+}
+.semimetal{
+    background-color: var(--semimetal);
 }

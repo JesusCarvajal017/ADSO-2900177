@@ -1,0 +1,21 @@
+
+
+/* .elementos div.col-2{
+    border: 1px solid;
+} */
+
+.prueba{
+    border: 1px solid;
+    width: initial;
+    height: 40px;
+}
+
+.elemnt{
+    width: 60px;
+    border: 1px solid;
+    height: 30px;
+}
+
+.prueba div.col-2{
+    border: 1px solid;
+}
