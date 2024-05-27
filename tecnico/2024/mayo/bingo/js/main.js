@@ -77,7 +77,7 @@ function captorX(inicio, fin, filas, rango = 0){
 // console.log(`Cantidad de impares: ${impares}`);
 // console.log(letras)
 // console.log("bingo")
-console.log(bingo);
+console.log(-);
 console.log(`La x grande: `)
 console.log(captorX(0,4,5));
 console.log(`La x pequeña 1: `)

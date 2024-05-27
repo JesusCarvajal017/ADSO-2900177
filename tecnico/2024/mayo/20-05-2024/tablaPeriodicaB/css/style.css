@@ -4,74 +4,64 @@
     Fecha creacion: 20 de mayo de 2024
 */
 
-:root{
+:root {
     --metales-alcalinos: #FF6F06;
     --alcalinoterraneos: #ff5100;
     --otros-metales: #84339c;
     --metales-transicion: #fa34a4;
-    --lantanidos: #279C1E; 
-    --actinidos: #DCEF41; 
+    --lantanidos: #279C1E;
+    --actinidos: #DCEF41;
     --metaloides: #B5C483;
     --no-metales: #da2f90;
-    --halogenos: #C1F953; 
+    --halogenos: #C1F953;
     --gases-nobles: #32dbf1;
 }
 
-/* .container{
-    border: 1px solid;
-} */
 
-.celdas{
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.celdas div.col-2{
+.celdas div.col-2 {
     padding: 0;
     margin: 0;
 }
-.elemento{
+
+.elemento {
     width: 71px;
     height: 75px;
     margin: 1px;
     border: 1px solid #000;
     border-radius: 5px;
-}
-
-.elemento{
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 20px 13px 25px 15px;
     overflow: hidden;
-
 }
 
-.elemento div.col-12{
-    /* padding: 5px; */
+.elemento:hover {
+    border: 1.5px solid #0008ff;
+    box-shadow: 0px 0px 6px #0008ff;
 }
 
-.masa-atomic{
+.masa-atomic {
     font-size: 12px;
 }
 
-.numero-atomic{
+.numero-atomic {
     font-size: 11px;
     font-weight: 800;
     text-align: end;
     padding-right: 3px;
 }
 
-.densidad{
+.densidad {
     font-size: 11px;
 }
 
-.electro{
+.electro {
     font-size: 12px;
     font-size: 8px;
     text-align: end;
 }
 
-.simbol{
+.simbol {
     grid-column: 1/3;
     text-align: center;
     font-size: 22px;
@@ -79,51 +69,115 @@
     margin-top: -5px;
 }
 
-.name-element{
+.name-element {
     grid-column: 1/3;
     font-size: 11px;
     font-weight: bold;
     text-align: center;
 }
 
+/* informacion del elemento */
+.info-elemento {
+    width: 150px;
+    height: 160px;
+    border: 1px solid;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 2px;
+    /* grid-template-rows: ; */
+
+}
+
+.info-masa-atomic {
+    font-size: 20px;
+
+}
+
+.info-numero-atomic {
+    text-align: end;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.info-densidad {
+    font-size: 20px;
+
+}
+
+.info-electro {
+    text-align: end;
+    font-size: 20px;
+}
+
+.info-simbol {
+    font-weight: bold;
+    font-size: 20px;
+    font-size: 40px;
+    grid-column: 1/3;
+    text-align: center;
+}
+
+.info-name-element {
+    grid-column: 1/3;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+
+
 /* --------------------------- colores de los elementos --------------------------- */
 
-.no-metales{
+.no-metales {
     background-color: var(--no-metales);
 }
-.gases-nobles{
+
+.gases-nobles {
     background-color: var(--gases-nobles);
 }
-.halogenos{
+
+.halogenos {
     background-color: var(--halogenos);
 }
-.metales-alcalinos{
+
+.metales-alcalinos {
     background-color: var(--metales-alcalinos);
 }
-.alcalinoterraneos{
+
+.alcalinoterraneos {
     background-color: var(--alcalinoterraneos);
 }
-.metaloides{
+
+.metaloides {
     background-color: var(--metaloides);
 }
-.otros-metales{
+
+.otros-metales {
     background-color: var(--otros-metales);
 }
-.lantanidos{
+
+.lantanidos {
     background-color: var(--lantanidos);
 }
-.actinidos{
+
+.actinidos {
     background-color: var(--actinidos);
 }
-.metales-transicion{
+
+.metales-transicion {
     background-color: var(--metales-transicion);
 }
-.no-metales{
+
+.no-metales {
     background-color: var(--no-metales);
 }
-.no-metal{
+
+.no-metal {
     background-color: var(--no-metal);
 }
-.semimetal{
+
+.semimetal {
     background-color: var(--semimetal);
 }
