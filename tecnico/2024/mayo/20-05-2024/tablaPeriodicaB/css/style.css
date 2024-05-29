@@ -134,11 +134,20 @@ body{
 }
 
 .clasificacion-elementos{
+    display: grid;
+    grid-template-columns: 20% 10% 40% 10% 20%;
     position: absolute;
     /* border: 1px solid; */
-    width: 320px;
+    width: 400px;
+    border: 1px solid;
     height: 200px;
     
+}
+
+.nda{
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: 15% 15% 40% 15% 15% ;
 }
 
 .box-e{

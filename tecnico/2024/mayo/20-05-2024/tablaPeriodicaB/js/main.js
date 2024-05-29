@@ -81,7 +81,9 @@ elementosInfo.forEach((elemento) => {
         simboloInfoV.textContent = simbole;
         nombreElementoInfoV.innerHTML = name;
 
+        // let dataElemento = event.currentTarget.getAttribute("data-id-elemento");
         let dataElemento = event.currentTarget.getAttribute("data-id-elemento");
+
         modal.innerHTML = infoModales[dataElemento].descripcion;
 
         let titleModal = `${infoModales[dataElemento].nombreElement} (${infoModales[dataElemento].simbolo})`
