@@ -41,12 +41,12 @@ elementosInfo.forEach((elemento) => {
         let name = elemento.querySelector('.name-element').innerHTML;
 
 
-        masaAtomicaInfo.innerHTML = masa;
-        numeroAtomicoInfo.innerHTML = numero;
-        densidadInfo.innerHTML = densi;
-        electronegatividadInfo.innerHTML = elect;
-        simboloInfo.innerHTML = simbole;
-        nombreElementoInfo.innerHTML = name;
+        masaAtomicaInfo.textContent = masa;
+        numeroAtomicoInfo.textContent = numero;
+        densidadInfo.textContent = densi;
+        electronegatividadInfo.textContent = elect;
+        simboloInfo.textContent = simbole;
+        nombreElementoInfo.textContent = name;
 
     })
 })

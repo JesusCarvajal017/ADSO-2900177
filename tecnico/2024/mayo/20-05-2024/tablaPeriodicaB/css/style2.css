@@ -4,18 +4,26 @@
     border: 1px solid;
 } */
 
-.prueba{
-    border: 1px solid;
-    width: initial;
+/* .container{
+    padding: 0;
+} */
+
+.col-4{
+    padding: 0;
+}
+
+.col-2{
+    /* border: 1px solid; */
+    /* margin: 0; */
+    /* padding-right: 1px;
+    padding-left: 1px; */
+}
+
+
+.caja{
+    width: 50px;
     height: 40px;
-}
-
-.elemnt{
-    width: 60px;
     border: 1px solid;
-    height: 30px;
-}
-
-.prueba div.col-2{
-    border: 1px solid;
+    overflow: hidden;
+    padding: 1px;
 }

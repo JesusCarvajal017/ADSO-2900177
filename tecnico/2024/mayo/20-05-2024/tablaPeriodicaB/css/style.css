@@ -17,14 +17,36 @@
     --gases-nobles: #32dbf1;
 }
 
+body{
+    background-color: #fff0e1;
+}
 
-.celdas div.col-2 {
+.reset{
     padding: 0;
+}
+
+.tabla-periodica{
+    width: initial;
+    min-width: 1100px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    border: 3px solid;
+}
+
+.col-12{
     margin: 0;
 }
 
+
+.celdas div.col-2 {
+    padding: 0;
+    /* margin: 0; */
+}
+
 .elemento {
-    width: 71px;
+    max-width: 70px;
+    width: 65px;
     height: 75px;
     margin: 1px;
     border: 1px solid #000;
@@ -76,7 +98,69 @@
     text-align: center;
 }
 
-/* informacion del elemento */
+.niveles{
+    width: 32.5px;
+    height: 75px;
+    margin: 1px;
+    /* border: 1px solid; */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.espacio{
+    height: 75px;
+}
+
+.familia{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.estados-materia{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(4, 25%);
+    position: absolute;
+    /* border: 1px solid; */
+    width: 208px;
+    height: 200px;
+    padding: 4px;
+}
+
+.clasificacion-elementos{
+    position: absolute;
+    border: 1px solid;
+    width: 320px;
+    height: 200px;
+    
+}
+
+.box-e{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 5px 4px;
+    margin: 1px;
+
+}
+
+.box-descripcion{
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+/* -------------------------- informacion del elemento -----------------------------*/
 .info-elemento {
     width: 150px;
     height: 160px;
@@ -126,7 +210,9 @@
 }
 
 
-
+.informacionModal{
+    text-align: justify;
+}
 
 /* --------------------------- colores de los elementos --------------------------- */
 
@@ -180,4 +266,9 @@
 
 .semimetal {
     background-color: var(--semimetal);
+}
+
+/* estado de la materia colores */
+.solido{
+    border: 1px solid  #0008ff;
 }
