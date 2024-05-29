@@ -136,10 +136,11 @@ body{
 .clasificacion-elementos{
     display: grid;
     grid-template-columns: 20% 10% 40% 10% 20%;
+    grid-template-rows: repeat(4, 25%);
     position: absolute;
     /* border: 1px solid; */
-    width: 400px;
-    border: 1px solid;
+    width: 350px;
+    /* border: 1px solid; */
     height: 200px;
     
 }
@@ -171,15 +172,22 @@ body{
 
 /* -------------------------- informacion del elemento -----------------------------*/
 .info-elemento {
-    width: 150px;
+    width: 140px;
     height: 160px;
     border: 1px solid;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 60% 40%;
     padding: 2px;
+    /* grid-column: span 4; */
     /* grid-template-rows: ; */
 
+}
+
+.medium{
+    display: flex;
+    align-items: center;
+    grid-row: span 4;
 }
 
 .info-masa-atomic {
