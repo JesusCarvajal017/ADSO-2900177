@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salario persona (completo)</title>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <script>
+        let valorDia = 1000000.3; 
+        let diasTrabajos = 30.4; 
+        let salarioMinimo = 1300000; 
+        let sueldoA = sueldoBruto(valorDia, diasTrabajos);
+        let salud = prestaciones(sueldoA, 0.12);
+        let pension = prestaciones(sueldoA, 0.16);
+        let arl =  prestaciones(sueldoA, 0.052);
+        // let deducciones = salud + pension + arl;
+        let subTrasporte = subTransporte(sueldoA);
+        let rtncion = rtncionF(sueldoA);;
+        let sueldoTotal = salario(sueldoA);
+
+        console.log(`=============================`);
+        console.log(`El valor del dia es de: ${valorDia}`);
+        console.log(`Los dias trabajados son: ${diasTrabajos}`);
+        console.log(`El sueldo bruto es de: ${sueldoA}`);
+        console.log(`=============================`);
+        console.log(`la salud es de: $${salud}`);
+        console.log(`la pension es de: $${pension}`);
+        console.log(`la arl es de: $${arl}`);
+        console.log(`=============================`);
+        console.log(`la retencion es de: ${rtncion}`);
+        console.log(`El subsidio de transporte es de: ${subTrasporte}`);
+        console.log(`=============================`);
+        console.log(`El sueldo total es de: ${sueldoTotal}`);
+
+    </script>
+</body>
+</html>

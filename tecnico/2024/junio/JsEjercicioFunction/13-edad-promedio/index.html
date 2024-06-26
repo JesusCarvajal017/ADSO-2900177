@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 edades, promedio</title>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <script>
+        // formato fecha yyyy/mm/dd
+        let fchaNcmnto1 = "2006/02/27";
+        let fchaNcmnto2 = "1996/02/24";
+        let fchaNcmnto3 = "2000/03/23";
+
+        let edad1 = edad(fchaNcmnto1);
+        let edad2 = edad(fchaNcmnto2);
+        let edad3 = edad(fchaNcmnto3);
+
+        console.log("==================================================")
+        console.log(valiMayoriaEdad(edad1));
+        console.log(valiMayoriaEdad(edad2));
+        console.log(valiMayoriaEdad(edad3));
+        console.log("==================================================")
+        console.log(prmdioEdades([edad1,edad2,edad3]));
+        console.log("==================================================")
+
+    </script>
+</body>
+</html>

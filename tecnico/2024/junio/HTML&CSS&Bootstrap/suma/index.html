@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma</title>
+
+    <!-- estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/componentes.css">
+
+    <!-- estilos librerias -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+      <div class="col-12 row">
+        <div class="col-2"></div>
+        <div class="col-4 contenido">
+            <div class="formulario-global">
+                <form onsubmit="return false;" id="calcular">
+                    <div class="mb-3">
+                      <label for="numberUno" class="form-label">Numero Uno</label>
+                      <input type="number" class="form-control" id="numberUno" step="any">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Numero Dos</label>
+                      <input type="number" class="form-control" id="numberDos" step="any">
+                    </div>
+                    <div class="mb-12 d-flex justify-content-center">
+                      <button type="submit" class="btn-calculator">Calcular</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-6 contenido">
+          <div class="section-respuesta"></div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <!-- script personalizados -->
+    <script src="js/main.js"></script>
+
+    <!-- script boostrap -->
+    <script src="../lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/validationB.js"></script>
+</body>
+</html>
