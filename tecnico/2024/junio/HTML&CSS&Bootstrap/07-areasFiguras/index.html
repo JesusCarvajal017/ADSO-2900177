@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas figuras</title>
+
+    <!-- estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/componentes.css">
+
+    <!-- estilos librerias -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.css">
+    
+</head>
+<body>
+    <div class="container">
+      <div class="col-12 row p-2">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="col-12 row">
+            <h3 class="title-menu text-center m-2">Figuras geometricas</h3>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div class="card" data-figura="1">
+                <img src="image/figuras/cuadrado.png" alt="">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card" data-figura="2">
+                <img src="image/figuras/rectangulo.png" alt="">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card" data-figura="3">
+                <img src="image/figuras/triangulo.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-areas"></div>
+      </div>
+      <div class="col-12 row p-2">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <!-- formulario de cuadrado -->
+          <div class="col-12 row">
+            <div class="col-5">
+              <form id="cuadrado" style="display: none;">
+                <div class="col-md-12">
+                  <label for="ladoCuadrado" class="form-label">Digite el lado en (m): </label>
+                  <input type="number" name="ladoCuadrado" id="ladoCuadrado" class="form-control">
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                  <button class="btn-calculator m-2">Calcular</button>
+                </div>
+              </form>
+              <!-- formulario de rectangulo -->
+              <form action="" id="rectangulo" style="display: none;">
+                <div class="col-md-12">
+                  <label class="form-label" for="base">Digite la base en (m)</label>
+                  <input class="form-control" type="number" name="base" id="base">
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label" for="altura">Digite la altura en (m)</label>
+                  <input class="form-control" type="number" name="altura" id="altura">
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                  <button class="btn-calculator m-2">Calcular</button>
+                </div>
+              </form>
+            </div>
+            <div class="col-7">
+              <div class="section-respuesta m-2">
+                <figure class="figura-opcion p-2" id="imagenFigura">
+                  <!-- <img src="image/figuras/triangulo.png"> -->
+                </figure>
+                <div class="descripcion-figura"></div>
+                <div class="area-figura"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <!-- script personalizados -->
+    <script src="js/main.js"></script>
+
+    <!-- script boostrap -->
+    <script src="../lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/validationB.js"></script>
+</body>
+</html>

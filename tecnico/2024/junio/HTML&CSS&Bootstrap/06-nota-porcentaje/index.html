@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promedio notas</title>
+
+    <!-- estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/componentes.css">
+
+    <!-- estilos librerias -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.css">
+    
+</head>
+<body>
+    <div class="container">
+      <div class="col-12 row">
+        <div class="col-6 contenido">
+            <div class="formulario-global">
+                <form id="frmPorcentaje" class="needs-validation" novalidate>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="" class="form-label">%:</label>
+                        <input type="number" class="form-control" id="prc1" step="any" required>
+                      </div>
+                      <div class="col-md-9">
+                        <label for="" class="form-label">Nota 1: </label>
+                        <input type="number" class="form-control" id="notaUno" step="any" required>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="" class="form-label">%:</label>
+                        <input type="number" class="form-control" id="prc2" step="any" required>
+                      </div>
+                      <div class="col-md-9">
+                        <label for="" class="form-label">Nota 2:</label>
+                        <input type="number" class="form-control" id="notaDos" step="any" required>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="" class="form-label">%</label>
+                        <input type="number" class="form-control" id="prc3" step="any" required>
+                      </div>
+                      <div class="col-md-9">
+                        <label for="" class="form-label">Nota 3:</label>
+                        <input type="number" class="form-control" id="notaTres" step="any" required>
+                      </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center m-2">
+                      <button type="submit" class="btn-calculator" id="btnCalcular" >Calcular</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-6 contenido">
+          <div class="section-respuesta">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <!-- script personalizados -->
+    <script src="js/main.js"></script>
+
+    <!-- script boostrap -->
+    <script src="../lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/validationB.js"></script>
+</body>
+</html>
