@@ -85,6 +85,7 @@ function main(data){
 
 }
 
+
 function areasFiguras(figura){
     let fg = figura.toString();
 
@@ -96,7 +97,6 @@ function areasFiguras(figura){
 
     const dataNumbers = numberLogitudes[fg];
 
-    console.log(fg)
     let area = 1;
     let mensajeFigura = "";
     if(fg == "1"){
@@ -104,7 +104,7 @@ function areasFiguras(figura){
         mensajeFigura = "Cuadrado";
     }
     else{
-        area = fg == "2"  ? (dataNumbers[0] * dataNumbers[1]) : (dataNumbers[0] * dataNumbers[2]) ;
+        area = fg == "2"  ? (dataNumbers[0] * dataNumbers[1]) : (dataNumbers[0] * dataNumbers[1]) / 2;
         mensajeFigura = fg == "2" ? "Rectangulo" : "Triangulo";
     }
 
