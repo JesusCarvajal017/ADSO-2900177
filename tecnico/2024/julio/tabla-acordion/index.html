@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLAS DE MULTIPLICAR</title>
+
+    <!-- estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/componentes.css">
+
+    <!-- estilos librerias -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.css">
+</head>
+<body class="patters">
+    
+    <div class="container">
+        <section class="formulario-tablas">
+            <div class="col-12 row p-2">
+                <div class="col-4"></div>
+                <div class="col-4 contenido">
+                    <div class="formulario-global">
+                        <form id="calcularTabla" class="form-table needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="" class="form-label p-2">Tablas deseadas:</label>
+                                <input type="number" class="form-control p-2" id="numberUno" step="any" required>
+                            </div>
+                            <!-- <div class="mb-3">
+                                <label for="" class="form-label"></label>
+                                <input type="number" class="form-control" id="numberDos" placeholder="Numero Dos" step="any">
+                            </div> -->
+                            <div class="mb-12 d-flex justify-content-center">
+                              <button class="btn-calculator m-2" id="btnCalcular" >Calcular</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="acordion-resultados">
+            <div class="col-12 row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <!-- <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Accordion Item #1
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th colspan="2" scope="row">Handle</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="col-8">1 x 2 = </td>
+                                        <td class="col-4">2</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Accordion Item #1
+                            </button>
+                          </h2>
+                          <div id="flush-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                          </div> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/validationB.js"></script>
+</body>
+</html>

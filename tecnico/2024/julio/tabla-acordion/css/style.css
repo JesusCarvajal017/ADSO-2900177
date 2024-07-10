@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Calculator';
+    src: url('../../lib/fonts/Calculator.ttf');
+}
+
+@font-face {
+    font-family: 'Comica';
+    src: url('../../lib/fonts/Comico-Regular.ttf');
+}
+
+.form-table{
+    background-color: #d8d8d8;
+    border-radius: 15px;
+
+    
+}
