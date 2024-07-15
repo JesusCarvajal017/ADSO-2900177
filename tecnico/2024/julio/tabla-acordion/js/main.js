@@ -25,10 +25,10 @@ function generarTablas(tablas){
         pantalla += `<div class="accordion-item">`;
             pantalla += `<h2 class="accordion-header">`;
                 pantalla += `<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${iterador + 1}" aria-expanded="false">`;
-                    pantalla += `Tabla ${iterador + 1}`;
-            pantalla += `</h2`;
+                    pantalla += `Tabla ${iterador + 1} </button>`;
+            pantalla += `</h2>`;
 
-            pantalla+= `div id="${iterador + 1}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">`;
+            pantalla+= `<div id="${iterador + 1}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">`;
                 pantalla += `<div class="accordion-body">`;
                     pantalla += `<div class="accordion-body">`;
                         pantalla += `<table class="table table-bordered">`;
@@ -40,9 +40,10 @@ function generarTablas(tablas){
                             <td>${data[iterador][iterador2]}</td>
                         </tr>`
         }
-                        pantalla+= `</tr></tbody>`;
+                        pantalla+= `</tbody></table>`;
                 
                 pantalla += `</div>`;
+            pantalla += `</div>`;
             pantalla += `</div>`;
 
 
@@ -65,7 +66,6 @@ form.addEventListener('submit', (event)=>{
 
     document.getElementById('accordionFlushExample').innerHTML = DOMpa;
 
-   
 
 
 })

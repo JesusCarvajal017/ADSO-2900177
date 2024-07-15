@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINGO</title>
+    <link rel="icon" href="img/icons/bingo.png">
+
+    <!-- estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/componentes.css">
+
+    <!-- estilos librerias -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.css">
+</head>
+<body>
+    <div class="container" id="content">
+        <section class="interfaz-start " >
+            <div class="col-12 title-bingo d-flex align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="titulo-bingo">BINGO</h1>
+                </div>
+            </div>
+            <div class="col-12 row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <button class="btn btn-primary m-2" id="bingoRandom">Generar bingo ramdom</button>
+                    <button class="btn btn-primary m-2" id="generarTable">Generar bingo (tabla multiplicar)</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-generate" style="display: none;">
+            <div class="wrapper">
+                <div class="flip-card__inner">
+                    <div class="flip-card__front">
+                        <div class="title">
+                            <img src="img/icons/formula.png" alt="">
+                        </div>
+                        <form action="" class="flip-card__form" id="htmlOtro"> 
+                            <input type="number" placeholder="Tabla multiplicars" id="numberTabla" class="flip-card__input">
+                            <button class="flip-card__btn" type="submit">Generar Bingo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bingo" style="display: none;" >
+            <div class="col-12 row">
+                <div class="col-8">
+                    <div class="titile-b">
+                        <div class="letras-bingo">B</div>
+                        <div class="letras-bingo">I</div>
+                        <div class="letras-bingo">N</div>
+                        <div class="letras-bingo">G</div>
+                        <div class="letras-bingo">O</div>
+                    </div>
+                    <div class="tablero-bingo">
+                        
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="botones-x">
+                        <button class="btn btn-primary btn-captorX">X Grande</button>
+                        <button class="btn btn-primary btn-captorX">X pequeña 1</button>
+                        <button class="btn btn-primary btn-captorX">X pequeña 2</button>
+                        <button class="btn btn-primary btn-captorX">X pequeña 3</button>
+                    </div>
+                    <div class="botones-letras m-1">
+                        <button class="btn btn-primary btn-letras">B</button>
+                        <button class="btn btn-primary btn-letras">I</button>
+                        <button class="btn btn-primary btn-letras">N</button>
+                        <button class="btn btn-primary btn-letras">G</button>
+                        <button class="btn btn-primary btn-letras">O</button>
+                    </div>
+                    <!-- <button class="btn btn-primary"></button>
+                    <button class="btn btn-primary"></button> -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/mani.js"></script>
+</body>
+</html>
