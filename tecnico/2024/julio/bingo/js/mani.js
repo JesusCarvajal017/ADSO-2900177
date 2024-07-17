@@ -83,6 +83,7 @@ function mostraBingo(info, bandera = true){
             removeClass(valoresBingo, 'active-focus');
             addClass(filasLetras, 'rev-focuss');
 
+
             filasLetras[i].classList.remove('rev-focuss');
             filasLetras[i].classList.add('active-fila')
         })

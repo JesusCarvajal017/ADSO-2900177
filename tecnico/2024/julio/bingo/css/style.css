@@ -74,13 +74,22 @@ body{
 
 .active-focus{
     background-color: rgb(226, 242, 255) !important;
+    transition: 1s all;
 }
 
 .active-fila{
     background-color: rgb(0, 0, 0) !important;
-    transform: scale(1.2);
+    transform: scale(1.02);
+    transition: 1s all;
 }
 
 .rev-focuss{
     filter: blur(5px);
+    transition: 500ms all;
+    background-color: rgba(0, 0, 0, 0.504) !important;
+}
+
+.rev-focuss div{
+    background-color: rgba(0, 0, 0, 0.504) !important;
+
 }
