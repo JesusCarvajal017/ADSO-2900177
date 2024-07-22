@@ -23,7 +23,7 @@ body{
 
 
 .title-bingo{
-    height: 450px;
+    height: 250px;
 
 }
 
@@ -38,23 +38,31 @@ body{
 .titile-b{
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 120px);
     color: #ffffffe1 !important;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tablero-bingo{
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 120px);
     background: #ffffff62;
     border-radius: 5px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .celdas-bingo{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 110px;
+    /* width: 80px; */
     background: #83cdff;
     border: 1px solid;
     border-radius: 15px;
@@ -66,9 +74,9 @@ body{
 .letras-bingo{
     text-align: center;
     font-family: 'Grandstander';
-    font-size: 7em;
+    font-size: 4em;
     font-weight: bold;
-    height: 150px;
+    height: 100px;
     /* box-shadow: 0px 0px 10px #8f0c0c; */
 }
 
