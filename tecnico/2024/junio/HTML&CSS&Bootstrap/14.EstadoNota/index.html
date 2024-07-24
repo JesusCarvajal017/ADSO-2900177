@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio de notas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/componentes.css">
+
+    <!-- estilos librerias -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-10 row forma">
+            <div class="formulario col-6">
+                <form class="row g-3 needs-validation" novalidate onsubmit="return operar()">
+                    <div class="col-md-10">
+                        <label for="txtNota1" class="form-label">Digite la Primer Nota</label>
+                        <input type="tetx" class="form-control" id="txtNota1" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <label for="txtNota2" class="form-label">Digite la segunda Nota</label>
+                        <input type="tetx" class="form-control" id="txtNota2" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <label for="txtNota3" class="form-label">Digite la tercer Nota</label>
+                        <input type="tetx" class="form-control" id="txtNota3" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-dark" type="sutmit">
+                            Calcular <i class="fa-solid fa-calculator"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4">
+                <div id="operacion"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/validationB.js"></script>
+    <script src="js/estadoNotas.js"></script>
+</body>
+
+</html>

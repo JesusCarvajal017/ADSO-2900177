@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio de mayoria edad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/componentes.css">
+
+    <!-- estilos librerias -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h5 class="text-center mb-4">Promedio de Mayoria edad</h5>
+                <div class="row">
+                    <div class="col-7">
+                        <form class="needs-validation formulario" novalidate onsubmit="return mandar()">
+                            <fieldset>
+                                <legend>Persona 1</legend>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="txtAnioNa1" class="form-label">Año de Nacimiento</label>
+                                        <input type="number" class="form-control" id="txtAnioNa1" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="txtAnioA1" class="form-label">Año Actual</label>
+                                        <input type="number" class="form-control" id="txtAnioA1" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Persona 2</legend>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="txtAnioNa2" class="form-label">Año de Nacimiento</label>
+                                        <input type="number" class="form-control" id="txtAnioNa2" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="txtAnioA2" class="form-label">Año Actual</label>
+                                        <input type="number" class="form-control" id="txtAnioA2" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Persona 3</legend>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="txtAnioNa3" class="form-label">Año de Nacimiento</label>
+                                        <input type="number" class="form-control" id="txtAnioNa3" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="txtAnioA3" class="form-label">Año Actual</label>
+                                        <input type="number" class="form-control" id="txtAnioA3" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+                            </fieldset>
+            
+                            <div class="col-12">
+                                <button class="btn btn-dark" type="submit">
+                                    Calcular <i class="fa-solid fa-calculator"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-5">
+                        <div id="operacion"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/validationB.js"></script>
+    <script src="js/promedioMayoriaEdad.js"></script>
+</body>
+
+</html>
