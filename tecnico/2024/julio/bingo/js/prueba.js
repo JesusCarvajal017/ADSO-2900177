@@ -62,7 +62,18 @@ function letrasBingo(array = []){
 }
 
 console.log(bingoPrueba)
-console.log(captorX(0,4,5));
+for(let i = 0; bingoPrueba.length; i++){
+    console.log(bingoPrueba[i][0])
+    if(i == 4){
+        for(let i2 = 0; i2 <bingoPrueba[i].length; i2++){
+            console.log(bingoPrueba[i][i2])
+            if(i2 == )
+        }
+    }
+}
+
+// console.log(bingoPrueba)
+// console.log(captorX(2,4,5,2));
 // console.log(letrasBingo(bingoPrueba))
 
 

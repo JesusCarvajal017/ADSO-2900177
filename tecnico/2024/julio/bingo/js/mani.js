@@ -51,9 +51,10 @@ function mostraBingo(info, bandera = true){
 
     let capturaXs = {
         "0": captorX(dataBingo,0, 4, 5),
-        "1": captorX(dataBingo,0,2,3),
-        "2": captorX(dataBingo,2,4,3),
-        "3": captorX(dataBingo,1,3,5,2),
+        "1": captorX(dataBingo,1,3,3),
+        "2": captorX(dataBingo,0,2,5,2),
+        "3": captorX(dataBingo,2,4,5,2),
+        "4": [...captorX(dataBingo,1,3,3), ...captorX(dataBingo,0,2,5,2), ...captorX(dataBingo,2,4,5,2)]
     };
 
     // efecto para las xs
@@ -63,6 +64,7 @@ function mostraBingo(info, bandera = true){
             removeClass(valoresBingo, 'active-focus');
             removeClass(filasLetras, 'active-fila');
             removeClass(filasLetras, 'rev-focuss');
+            
             
             capturaXs[i].forEach(valuex =>{
                 valoresBingo.forEach(elment =>{

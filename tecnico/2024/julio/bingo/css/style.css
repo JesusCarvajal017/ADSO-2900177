@@ -81,7 +81,7 @@ body{
 }
 
 .active-focus{
-    background-color: rgb(226, 242, 255) !important;
+    background-color: rgb(255, 0, 0) !important;
     transition: 1s all;
 }
 
@@ -100,4 +100,9 @@ body{
 .rev-focuss div{
     background-color: rgba(0, 0, 0, 0.504) !important;
 
+}
+
+.botones-letras{
+    position: relative;
+    top: 30px;
 }
