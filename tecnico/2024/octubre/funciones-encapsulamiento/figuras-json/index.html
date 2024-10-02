@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>areas</title>
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.css">
+    <script src="js/operar.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-6 capa">
+                    <form class="row g-3 needs-validation justify-content-center" onsubmit="realizarOperaciones(); return false;">
+                        <label for="">Lado Cuadrado</label>
+                        <input class="form-control" type="number" name="txtLadoC" id="txtLadoC" required>
+                        <label for="">Base Rectangulo</label>
+                        <input class="form-control" type="number" name="txtBaseRec" id="txtBaseRec" required>
+                        <label for="">Altura Rectangulo</label>
+                        <input class="form-control" type="number" name="txtalturaRec" id="txtalturaRec" required>
+                        <label for="">Base Triangulo</label>
+                        <input class="form-control" type="number" name="txtBaseTri" id="txtBaseTri" required>
+                        <label for="">Altura Triangulo</label>
+                        <input class="form-control" type="number" name="txtAlturaTri" id="txtAlturaTri" required>
+                        <br>
+                        <button class="btn btn-dark" type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-6 capa">
+                    <div id="areaC"></div>
+                    <div id="areaR"></div>
+                    <div id="areaT"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

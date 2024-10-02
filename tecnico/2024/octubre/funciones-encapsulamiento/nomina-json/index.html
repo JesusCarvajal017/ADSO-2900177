@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Nómina</title>
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/operar.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-6 capa">
+                    <form class="row g-3 needs-validation justify-content-center" onsubmit="realizarOperaciones(); return false;">
+                        <label for="txtDiasT">Días trabajados</label>
+                        <input class="form-control" type="number" name="txtDiasT" id="txtDiasT" required>
+                        <label for="txtValorD">Valor por día</label>
+                        <input class="form-control" type="number" name="txtValorD" id="txtValorD" required>
+                        <br>
+                        <button class="btn btn-dark" type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-6 capa">
+                    <div id="sueldo"></div>
+                    <div id="transporte"></div>
+                    <div id="bono"></div>
+                    <div id="retencion"></div>
+                    <div id="arl"></div>
+                    <div id="salud"></div>
+                    <div id="pension"></div>
+                    <div id="pagoT"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+        </div>
+    </div>
+</body>
+</html>
